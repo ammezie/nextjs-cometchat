@@ -7,7 +7,6 @@ const CometChatNoSSR = dynamic(
 );
 
 function Chat() {
-
     useEffect(() => {
         window.CometChat = require('@cometchat-pro/chat').CometChat
     });

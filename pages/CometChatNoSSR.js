@@ -6,18 +6,16 @@ export default class CometChatNoSSR extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            user: undefined
+          user: undefined
         }
     }
     componentDidMount() {
-      
       /**
       Initialize CometChat
       */
       let appSetting = new CometChat.AppSettingsBuilder().subscribePresenceForAllUsers().setRegion(consts.REGION).build();
       CometChat.init(consts.APP_ID, appSetting).then(
         () => {
-          
           /**
           *Log in user
           */

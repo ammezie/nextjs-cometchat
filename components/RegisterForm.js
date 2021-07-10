@@ -29,18 +29,18 @@ class RegisterForm extends React.Component {
 
     render() {
         return (
-            <div class="login-form">
-                <div class="row">
-                    <div class="card col-10 col-sm-4">
-                        <div class="card-body">
+            <div className="login-form">
+                <div className="row">
+                    <div className="card col-10 col-sm-4">
+                        <div className="card-body">
                             <form onSubmit={ this.handleSubmit }>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingInput" name="name" onChange={ this.handleChange } placeholder="Enter name" />
-                                    <label for="floatingInput">Name</label>
+                                <div className="form-floating mb-3">
+                                    <input type="text" className="form-control" id="floatingInput" name="name" onChange={ this.handleChange } placeholder="Enter name" />
+                                    <label htmlFor="floatingInput">Name</label>
                                 </div>
                                 <span>Already have an account? <a href="login">Login</a></span>
-                                 <div class="d-grid gap-2 mt-4">
-                                    <button class="btn btn-primary btn-lg" type="submit">
+                                 <div className="d-grid gap-2 mt-4">
+                                    <button className="btn btn-primary btn-lg" type="submit">
                                     Register
                                     </button>
                                 </div>
