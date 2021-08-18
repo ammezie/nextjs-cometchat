@@ -22,7 +22,7 @@ class RegisterForm extends React.Component {
 
         if(response) {
             await localStorage.setItem('user', JSON.stringify(response.data.data));
-            Router.push('/chat');
+            Router.push('/');
         }
         
     }
