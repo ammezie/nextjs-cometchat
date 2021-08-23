@@ -15,13 +15,12 @@ export default function useAPI(url) {
 
     const fetchData = async () => {
       try {
-      setLoading(true)
+        setLoading(true)
 
-      const res = await axios(`https://api-us.cometchat.io/v2.0${url}`, options)
-      const data = await res.data
-      setData(data.data)
-      setLoading(false)
-
+        const res = await axios.get(`https://api-us.cometchat.io/v2.0${url}`, options)
+        const data = await res.data
+        setData(data.data)
+        setLoading(false)
       } catch (error) {
         setError(error)
       }

@@ -19,12 +19,13 @@ class RegisterForm extends React.Component {
 
         let response = await registerUser(uid, name);
         
-
         if(response) {
-            await localStorage.setItem('user', JSON.stringify(response.data.data));
+            localStorage.setItem('user', JSON.stringify(response.data.data));
+            
             Router.push('/');
+        } else {
+            alert('Something went wrong. Please try again.')
         }
-        
     }
 
     render() {
